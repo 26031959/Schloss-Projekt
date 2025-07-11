@@ -46,6 +46,8 @@
     loader.load('modelle/schloss_aktuell.obj', function (object) {
       object.scale.set(1, 1, 1);
       scene.add(object);
+    }, undefined, function (error) {
+      console.error('Fehler beim Laden des Modells:', error);
     });
 
     window.addEventListener('resize', () => {
